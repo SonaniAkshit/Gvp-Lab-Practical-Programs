@@ -6,7 +6,7 @@ void in(int [],int *,int *);
 void display(int [],int *,int *);
 void main()
 {
-	int q[5],front=-1,rear=-1,ch;
+	int q[50],front=-1,rear=-1,ch;
 	int *f=&front,*r=&rear;
 
 	while(1)
