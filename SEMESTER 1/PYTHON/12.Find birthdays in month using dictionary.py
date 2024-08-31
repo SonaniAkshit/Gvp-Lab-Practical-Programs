@@ -6,16 +6,20 @@ month = int(input("Enter the month:"))
 print("--------------------------")
 print("Birthdays in month", month,)
 print("--------------------------")
-
+count=0
 if(month<=12):
     for name, birthday in birthdays.items():
         day, month1, year = birthday.split("/")
         if int(month1) == month:
             print(name, ":", birthday)
             print("--------------------------")
-        elif int(month1)!=month:
+            count= 1
+    else : 
+        if count == 0:
             print("Birthday Not Available..!")
-            break
+            print("--------------------------")
+        
+
 else:
     print("You Enterd Wrong Month..!")
     print("--------------------------")
