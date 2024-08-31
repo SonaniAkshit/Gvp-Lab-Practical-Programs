@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 10 // Define the size of the deque array
+#define SIZE 10
 
 void insertFront(int[], int *, int *);
 void insertRear(int[], int *, int *);
