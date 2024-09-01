@@ -53,7 +53,7 @@ void infixToPostfix(char infix[])
 
     for (i = 0; infix[i] != '\0'; i++) 
     {
-        if (isalnum(infix[i])) // if the character is an operand, add it to postfix
+        if (isalnum(infix[i]))
         {
             postfix[j++] = infix[i];
         } 
@@ -78,7 +78,7 @@ void infixToPostfix(char infix[])
 
 void main() 
 {
-    char infix[100];
+    char infix[10];
     printf("Enter infix expression: ");
     scanf("%s", infix);
 
