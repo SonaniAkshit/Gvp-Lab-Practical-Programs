@@ -90,7 +90,7 @@ void infixToPostfix(char infix[])
 
 void main()
 {
-    char infix[100];
+    char infix[10];
     printf("Enter infix expression: ");
     scanf("%s", infix);
     infixToPostfix(infix);
