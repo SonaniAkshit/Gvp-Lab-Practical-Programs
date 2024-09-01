@@ -126,6 +126,7 @@ void modifyElement(int arr[], int size)
     if (found) 
 	{
         printf("Element modified.\n");
+        displayArray(arr, size);
     } 
 	else 
 	{
@@ -154,6 +155,7 @@ void sortArray(int arr[], int size)
         }
     }
     printf("Array sorted.\n");
+    displayArray(arr, size);
 }
 
 void simpleSearch(int arr[], int size) 
