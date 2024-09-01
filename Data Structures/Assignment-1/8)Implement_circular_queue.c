@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 5 // Define the size of the circular queue array
+#define SIZE 5
 
 void insert(int[], int *, int *);
 void delete(int[], int *, int *);
