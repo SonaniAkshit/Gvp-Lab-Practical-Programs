@@ -31,10 +31,12 @@ void main()
 			case 2: display(arr,ele); break;
 			case 3: delete(arr,ele); break;
 			case 4: modify(arr,ele); break;
-			case 5: printf("count:%d",count); break;
-			case 6: exit(0);
+			case 5: sort(arr,ele); break;
+			case 6: printf("count:%d",count); break;
+			case 7: exit(0);
 		}
 	}
+	getch();
 }
 void add(int arr[],int *ele)
 {
@@ -52,7 +54,7 @@ void add(int arr[],int *ele)
 		(*ele)++;
 		count++;
 		
-		printf("\nElement: %d",n);
+		printf("\nElement add");
 	}
 }
 void display(int arr[],int *ele)
@@ -147,6 +149,17 @@ void sort(int arr[],int *ele)
 	}
 	else
 	{
-		
+		for (i = 0; i < *ele - 1; i++) 
+		{
+	        for (j = 0; j < *ele - i - 1; j++) 
+			{
+	            if (arr[j] > arr[j + 1]) 
+				{
+	                temp = arr[j];
+	                arr[j] = arr[j + 1];
+	                arr[j + 1] = temp;
+	            }
+	        }
+    	}
 	}
 }
