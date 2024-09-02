@@ -161,5 +161,7 @@ void sort(int arr[],int *ele)
 	            }
 	        }
     	}
+    	printf("Array sorted.\n");
+    	display(arr, ele);
 	}
 }
