@@ -6,11 +6,11 @@ king_of_spades = 1
 king_or_spade = kings + spades - king_of_spades
 print("--------------------------------------")
 
-print("The king OR Spade is:",king_or_spade)
+# print("The king OR Spade is:",king_or_spade)
 
 king_nor_spade = total_cards - king_or_spade
 
-print("The King NOR Spade is:",king_nor_spade)
+# print("The King NOR Spade is:",king_nor_spade)
 
 pb= king_nor_spade / total_cards
 
