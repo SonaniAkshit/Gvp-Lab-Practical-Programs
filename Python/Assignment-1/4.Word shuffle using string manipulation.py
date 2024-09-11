@@ -1,3 +1,4 @@
+print("\n")
 string=input("Enter Any String:")
 print("\n")
 print(string[2:10])
