@@ -3,7 +3,9 @@ number=int(number1)
 if(number>1):
     for i in range(2,(number//2)+1):
         if(number%i)==0:
+            print("\n")
             print("Not Prime.")
             break
     else:
+        print("\n")
         print("Prime.")
