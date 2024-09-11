@@ -1,3 +1,4 @@
+print("\n")
 n = input("Enter the number: ")
 n1=0
 n2=1
