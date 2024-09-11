@@ -15,7 +15,6 @@ public class Utility
         }
         return result;
     }
-
     public static boolean isPrime(int value) 
 	{
         if (value <= 1) 
@@ -53,5 +52,6 @@ public class Utility
         System.out.println("Is " + num + " prime? " + isPrime((int) num));
         System.out.println("Is " + num + " even? " + isEven(num));
         System.out.println("Is " + num + " odd? " + isOdd(num));
+        scanner.close();
     }
 }
