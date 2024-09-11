@@ -1,10 +1,10 @@
+print("\n")
 bg1 = input("Enter Blood Group 1 (A, B, AB, O): ").upper().strip()
 bg2 = input("Enter Blood Group 2 (A, B, AB, O): ").upper().strip()
 
 if bg1 not in ["A", "B", "AB", "O"] or bg2 not in ["A", "B", "AB", "O"]:
-    print("---------------------")
+    print("\n")
     print("Invalid Blood Group's")
-    print("---------------------")
     exit()
     
 if bg1 == "O":
@@ -19,19 +19,17 @@ elif bg1 == "AB":
 bg1_factor = input("Enter bg1 factor : ").upper().strip()
 bg2_factor = input("Enter bg2 factor : ").upper().strip()
 if bg1_factor not in ["+", "-"] or bg2_factor not in ["+", "-"]:
-    print("----------------")
+    print("\n")
     print("Invalid Factor's")
-    print("----------------")
     exit()
 
 if bg1_factor == "-" and bg2_factor == "+":
     match = False
 
 if match:
-    print("------------------------")
+    print("\n")
     print("Blood Groups Matched...!")
-    print("------------------------")
 else:
-    print("----------------------------")
+    print("\n")
     print("Blood Groups Not Matched...!")
-    print("----------------------------")
+    print("\n")
