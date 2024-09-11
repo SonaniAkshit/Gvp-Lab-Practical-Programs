@@ -1,5 +1,5 @@
 marks = []
-
+print("\n")
 for mark in range(10):
     mark = int(input("Enter marks : "))
     marks.append(mark)
@@ -12,9 +12,9 @@ failed = sum(mark < 40 for mark in marks)
 pass_per = (passed / students) * 100
 fail_per = (failed / students) * 100
 
-print("------------------")
+print("\n")
 print(f"Pass percentage:{pass_per:.2f}")
 print(f"Fail percentage: {fail_per:.2f}")
-print("---------------------------------------------------")
+print("\n")
 print("The Out Of {0} Student's,{1} Student's is Passed,And {2} Student's is Failed".format(students,passed,failed))
-print("---------------------------------------------------")
+print("\n")
