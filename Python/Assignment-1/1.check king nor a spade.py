@@ -15,6 +15,5 @@ king_nor_spade = total_cards - king_or_spade
 pb= king_nor_spade / total_cards
 
 print("\n")
-print("The Probability of it Being Neither a King NOR a Spade:",pb)
 print(f"The Probability of it Being Neither a King NOR a Spade: {pb:.2f}")
 print("\n")
