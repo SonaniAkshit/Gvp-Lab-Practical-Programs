@@ -1,15 +1,12 @@
-import java.util.Scanner;
+import java.util.*;
 
-public class Utility 
+public class utility 
 {
     public static long factorial(long value) 
 	{
-        if (value < 0) 
-		{
-            throw new IllegalArgumentException("Factorial is not defined for negative numbers.");
-        }
+		long i;
         long result = 1;
-        for (long i = 2; i <= value; i++) 
+        for (i = 2; i <= value; i++) 
 		{
             result *= i;
         }
@@ -17,11 +14,12 @@ public class Utility
     }
     public static boolean isPrime(int value) 
 	{
+		int i;
         if (value <= 1) 
 		{
             return false;
         }
-        for (int i = 2; i <= Math.sqrt(value); i++) 
+        for (i = 2; i <= Math.sqrt(value); i++) 
 		{
             if (value % i == 0) 
 			{
@@ -43,15 +41,26 @@ public class Utility
 
     public static void main(String[] args) 
 	{
-        Scanner scanner = new Scanner(System.in);
+		
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter a number: ");
-        long num = scanner.nextLong();
-
-        System.out.println("Factorial of " + num + ": " + factorial(num));
-        System.out.println("Is " + num + " prime? " + isPrime((int) num));
-        System.out.println("Is " + num + " even? " + isEven(num));
-        System.out.println("Is " + num + " odd? " + isOdd(num));
-        scanner.close();
+        long num = sc.nextLong();
+		
+		if (num < 0) 
+		{
+			System.out.println("Enter only positive value.");
+		}
+		//else if ((num >= 'a' && num <= 'z') || (num >= 'A' && num <= 'Z')) 
+		//{
+		//	System.out.println("Enter only positive value.");
+		//}
+		else
+		{
+			System.out.println("Factorial:"+factorial(num));
+			System.out.println("prime: " + isPrime((int) num));
+			System.out.println("even: " + isEven(num));
+			System.out.println("odd: " + isOdd(num));
+		}
     }
 }
