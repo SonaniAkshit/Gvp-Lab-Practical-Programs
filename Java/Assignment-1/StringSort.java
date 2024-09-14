@@ -1,9 +1,10 @@
 import java.util.*;
 
-class StringSort
+class stringsort
 {
 		public static void main(String args[])
 		{
+			int i;
 			if (args.length == 0) 
 			{
 				System.out.println("Please provide some integers as command-line arguments.");
@@ -12,7 +13,7 @@ class StringSort
 			String[] str = new String[args.length];
 			
 			System.out.println("\nInputed Elements:");
-			for (int i = 0; i < str.length; i++) 
+			for (i = 0; i < str.length; i++) 
 			{
 				str[i] = args[i];
 				System.out.print(" "+str[i]);
@@ -20,7 +21,7 @@ class StringSort
 			}
 			Arrays.sort(str);
 			System.out.println("\nSorted Array:");
-			for (int i = 0; i < str.length; i++) 
+			for (i = 0; i < str.length; i++) 
 			{
 				System.out.print(" "+str[i]);
 			}
