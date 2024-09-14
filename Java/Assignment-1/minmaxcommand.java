@@ -11,11 +11,12 @@ class minmaxcommand
             return;
         }
 
+		int i,j,temp;
         int[] a = new int[args.length];
         int max = Integer.MIN_VALUE,min = Integer.MAX_VALUE; 
 
 		System.out.println("\nInputed Elements:");
-        for (int i = 0; i < a.length; i++) 
+        for (i = 0; i < a.length; i++) 
 		{
             a[i] = Integer.parseInt(args[i]);
             System.out.print(" "+a[i]);
@@ -29,22 +30,22 @@ class minmaxcommand
                 min = a[i];
             }
         }
-		// for (int i = 0; i < a.length - 1; i++) 
-		// {
-        //     for (int j = 0; j < a.length - 1 - i; j++) 
-		// 	{
-        //         if (a[j] > a[j + 1]) 
-		// 		{
-        //             int temp = a[j];
-        //             a[j] = a[j + 1];
-        //             a[j + 1] = temp;
-        //         }
-        //     }
-        // }
-        Arrays.sort(a);
+		for (i = 0; i < a.length - 1; i++) 
+		{
+            for (j = 0; j < a.length - 1 - i; j++) 
+			{
+                if (a[j] > a[j + 1]) 
+				{
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+        //Arrays.sort(a);
 		
 		System.out.println("\nSorted Array:");
-        for (int i = 0; i < a.length; i++) 
+        for (i = 0; i < a.length; i++) 
 		{
             System.out.print(" "+a[i]);
 		}
