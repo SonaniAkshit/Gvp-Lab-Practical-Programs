@@ -9,6 +9,7 @@ void modifyElement(int arr[], int size);
 void sortArray(int arr[], int size);
 void simpleSearch(int arr[], int size);
 void displayArray(int arr[], int size);
+void binarysearch(int arr[], int *size);
 
 void main() 
 {
@@ -22,8 +23,9 @@ void main()
         printf("3) Modify\n");
         printf("4) Sort\n");
         printf("5) Simple Search\n");
-        printf("6) Display\n");
-        printf("7) Exit\n");
+		printf("6) Binary Search\n");
+        printf("7) Display\n");
+        printf("8) Exit\n");
         printf("===============\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -44,16 +46,18 @@ void main()
             case 5:
                 simpleSearch(arr, size);
                 break;
-            case 6:
-                displayArray(arr, size);
+			case 6:
+                binarysearch(arr, &size);
                 break;
             case 7:
+                displayArray(arr, size);
+                break;
+            case 8:
                 exit(0);
             default:
                 printf("Invalid choice. Please try again.\n");
         }
     }
-
     getch();
 }
 
@@ -201,4 +205,38 @@ void displayArray(int arr[], int size)
     }
     printf("\n");
 }
-
+void binarysearch(int arr[], int *size)
+{
+    int low = 0, high = *size - 1, mid, roll, found = 0;
+    if(*size == 0)
+    {
+    	printf("Array is Empty.\n");
+	}
+	else
+	{
+	    printf("Enter roll number to search: ");
+	    scanf("%d", &roll);
+	    while (low <= high) 
+		{
+	        mid = (low + high) / 2;   
+	        if (arr[mid] == roll) 
+			{
+	            printf("Record found: Name: %s, Roll No: %d\n", arr[mid]);
+	            found = 1;
+	            break;
+	        }
+	        else if (arr[mid] < roll) 
+			{
+	            low = mid + 1;
+	        }
+	        else 
+			{
+	            high = mid - 1;
+	        }
+	    }	    
+	    if (!found) 
+		{
+	        printf("Record with roll number %d not found.\n", roll);
+	    }
+	}
+}
